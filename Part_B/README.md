@@ -658,7 +658,6 @@ Postman was regularly used to hit our api and confirm the format of the requests
 - Git
 
   Git is used to maintain source control across
-  (georgia has good screenshots of peoples good clear commit messages and will add them to our readme)
   Every time a team member worked on a new feature this would be done in a clearly named branch with clear and communicative commit messages. This meant we minimised merge conflicts and team members understood why the changes were necessary when they pulled them. Changes would only be to the files relevant to the feature. All team members adhered to these protocols throughout the project.
 
   <img src="docs/commitmessages.png" width="500">
