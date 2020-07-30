@@ -485,11 +485,11 @@ $ EDITOR='code --wait' rails credentials:edit. (this will create a credentials f
 
 5. Run the following commands
 
-\$ bundle install
+$ bundle install
 
-\$ rails db:reset (Will drop and existing database, then create, seed and migrate a new one)
+$ rails db:reset (Will drop and existing database, then create, seed and migrate a new one)
 
-\$ rails s
+$ rails s
 
 Credentials for seeded data
 Username : Admin@gmail.com
@@ -654,7 +654,7 @@ Our planning and management methodology.
 
 Throughout our project we had a consistent and communicative approach to our work. Utilization of planning tools alongside clearly structured team meetings with a clear agenda and outcomes ensured we always had an understanding of where each of us were at in our work, what our immediate goals were as a team and how we were tracking for our end goal.
 
-### Team Meetings:
+### Team Meetings
 
 Immediate goal oriented
 Review technical road blocks
@@ -665,7 +665,7 @@ A typical day involves a team meeting following our stand-up presentations. Each
 
 Our meetings set us on track for the day the clear agenda with concrete outcomes kept us focused on our immediate deadlines.
 
-### Kaban Cards:
+### Kaban Cards
 
 - milestone focused
 
