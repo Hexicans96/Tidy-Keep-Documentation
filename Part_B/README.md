@@ -477,13 +477,7 @@ Rails - API
 $ EDITOR='code --wait' rails credentials:edit. (this will create a credentials file)
 ```
 
-3. Open the config/master.key file
-
-4. Paste this key in it
-
-‘594e7b2acb2603368b2dd6cbefac2f25’
-
-5. Run the following commands
+3. Run the following commands
 
 \$ bundle install
 
@@ -567,10 +561,6 @@ REACT_APP_API=http://localhost:3000
   React-router-dom is a library that when used in conjunction with react will handle the navigation throughout our website as well as rendering the appropriate component at the
   appropriate address.
 
-### Testing
-
-- Cypress
-
 ### Linting
 
 - Prettier
@@ -603,10 +593,14 @@ REACT_APP_API=http://localhost:3000
 
   Rspec is a testing framework to test code written in ruby, employing a test driven development approach. In this approach, users write the test first which will fail. In order to make the test pass, the most minimum code will be written. Lastly, the code will be refactored.
 
+  <img src="docs/rspecrequest.png" width="500">
+
 - Simple Cov
 
   Simple Coverage will check the code coverage within the project by how many lines of code were tested and collate the data into a file. This is useful in order to determine
   which areas needed more coverage or tests.
+
+  <img src="docs/simple-cov.png" width="500">
 
 - FactoryBot
 
@@ -623,6 +617,24 @@ REACT_APP_API=http://localhost:3000
 - Database Cleaner
 
   Database cleaner can be configured to clean up the test database code each time a test is run in order to maintain a clean start each time a test is run
+
+  **Cyprus**:
+
+End to End automated testing. Initially our authentication tests passed, however our most recent tests after updating our forms fail to locate input fields. Regrettably this means these fields are not in line with our accessability goals and we will have to refactor this. We have included two testing videos that of our login, one from a week ago and a more recent recording of the run, this highlights how automated testing can reveal important accessability errors or non semantic html issues and is an extremely useful asset. Recordings of runs attached in docs.
+
+<img src="docs/cypruspass.png" width="500">
+
+<img src="docs/cyprusfail.png" width="500">
+
+**API testing:**
+
+<img src="docs/logincurl.png" width="500">
+
+**PostMan**:
+
+Postman was regularly used to hit our api and confirm the format of the requests we were sending, confirm authentication and was helpful for trouble-shooting RSpec tests, for instance if we needed to check if the test was asking the wrong questions or if the data was bad we could confirm this quickly in postman rather than manually reproducing the request in the browser. A lot of our data was nested and it helped to be able to take a look at what objects we were handling. The below request is from testing when we modified our bookings index to make a more efficient query to the back end and produce a single object with all the data needed.
+
+<img src="docs/postman.png" width="500">
 
 ### Linting
 
@@ -644,28 +656,40 @@ REACT_APP_API=http://localhost:3000
   (georgia has good screenshots of peoples good clear commit messages and will add them to our readme)
   Every time a team member worked on a new feature this would be done in a clearly named branch with clear and communicative commit messages. This meant we minimised merge conflicts and team members understood why the changes were necessary when they pulled them. Changes would only be to the files relevant to the feature. All team members adhered to these protocols throughout the project.
 
+  <img src="docs/commitmessages.png" width="500">
+
+<img src="docs/commits.png" width="700">
+
 - Github
 
   We utilized Githubs review features if we wanted a second pair of eyes before we merged our feature branch into the remote master.
 
+  <img src="docs/githubreview.png" width="800">
+
 ## Developer journal
 
-Our planning and management methodology.
+### Our planning and management methodology
 
 Throughout our project we had a consistent and communicative approach to our work. Utilization of planning tools alongside clearly structured team meetings with a clear agenda and outcomes ensured we always had an understanding of where each of us were at in our work, what our immediate goals were as a team and how we were tracking for our end goal.
 
-### Team Meetings:
+We had an approach that allowed us to utilize team member's strengths with respect to our goals however we also consciously adopted an approach that encouraged and accommodated people wanting to take on tasks in areas they felt they needed more experience. We were really successful in balancing this which we feel is reflected in the fact that our outcome of part B is in line with our planning and goals of part A of this project with little revisions.
 
-Immediate goal oriented
-Review technical road blocks
-Delegation of tasks
-Decide clear timelines for these goals
+Our approach with respect to division of labour and skill sets meant we all were able to contribute a great deal while getting the most out of this project as a learning experience. For instance, Susu was clearly the most talented with respect to styling frameworks, and something she was confident in, other team mates asked her to take on the substantial task of styling which is a significant amount of work, and in part A this meant also handling wireframes (a discussion from part A resolved that it makes sense for whoever does the styling to do the wireframes), additionally Susu also expressed interest in utilizing Rails testing frameworks as this is an area she wanted to gain experience in. Georgia asked to be very involved in setting up the database as she wanted more experience and familiarity with relational databases and to bridge some gaps in her knowledge. Micah took on a bulk of handling the logic and utilizing libraries for the front end booking-system, something which he found a satisfying challenge and committed a lot of time researching.
+
+We had a clear and efficient division of labour that allowed for all team members to create and integrate functional components in both the front and back end. Because we all wanted experience across all of the different components of the app, this meant our organisation had to be rigorous. For certain components however it is necessary and more sensible to split these up. For example styling the front end was taken on by Susu, the bulk of the logic for generating the auto-quote feature was completed by Micah and Georgia spent a great deal working on the database structure.
+
+### Team Meetings
+
+- Immediate goal oriented
+- Review technical road blocks
+- Delegation of tasks
+- Decide clear timelines for these goals
 
 A typical day involves a team meeting following our stand-up presentations. Each team member speaks about what they have achieved, researched or where they are stuck and we plan how to deal with it. These meetings focused on the approach moving forward and problem solving and have a very technical focus - we already know what everyone is working on as we update our tasks on the Trello board and are in communication via discord regularly, so these meetings were especially useful to bring a fresh pair of eyes to a technical problem and in terms of the bigger picture, make decisions about where to head if we have a road block.
 
 Our meetings set us on track for the day the clear agenda with concrete outcomes kept us focused on our immediate deadlines.
 
-### Kaban Cards:
+### Kaban Cards
 
 - milestone focused
 
@@ -673,12 +697,20 @@ Our meetings set us on track for the day the clear agenda with concrete outcomes
 
 - timeline and perspective for entire project
 
+Our part B trello board:
+
+<https://trello.com/b/xm65kTwH/part-b>
+
 We utilized trello throughout the project, delegating cards to ourselves and others. We were able to have a clear sense of what and where people were working and this meant we were easily able to avoid having conflicts in our work - for instance, ensuring we don’t start on a feature that may involve changes to files critical to another team members feature. We could work on features that complimented the current goals of other team members.
 
-Aside from formal delegation, this approach was useful for smaller-scale problem solving, for instance Georgia put up a ticket about a button’s target box being very small, meaning it was difficult to click. After completing a task Susu saw this and was able to fix this when she styled a series of components.
+Aside from formal delegation, this approach was useful for smaller-scale problem solving, for instance Georgia put up a ticket about a button’s target box being very small, meaning it was difficult to click. Susu saw this and was able to fix this when she styled a series of components.
 
 So having a formal and communicative delegation structure helped keep us on target for our concrete goals, but allowed for flexible dynamic team work as well.
 
-## Link to trello
+We deployed early and had clear targets for certain milestones and used the Trello board to monitor progess on these larger goals and the team meetings to discuss our immediate work.
 
-<https://trello.com/b/xm65kTwH/part-b>
+<img src="docs/trellocardexample.png" width="800">
+
+**We consistently clearly labled tasks with team members throughout the project and used the board to communicate progress to our team mates.**
+
+<img src="docs/delegation.png" width="800">
