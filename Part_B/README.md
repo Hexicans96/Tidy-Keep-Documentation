@@ -112,23 +112,59 @@ Knock is a library that is used to handle user authentication (Logging in/out) i
 
 
 
-Testing
-Rspec: 
-Rspec is a testing framework to test code written in ruby, employing a test driven development approach. In this approach, users write the test first which will fail. In order to make the test pass, the most minimum code will be written. Lastly, the code will be refactored. 
-Simple Cov: 
+**Testing**
+**Rspec: **
+
+Rspec is a testing framework to test code written in ruby, employing a test driven development approach. In this approach, users write the test first which will fail. In order to make the test pass, the most minimum code will be written. Lastly, the code will be refactored.
+
+<img src="docs/rspecrequest.png" width="500">
+
+**Simple Cov: **
+
 Simple Coverage will check the code coverage within the project by how many lines of code were tested and collate the data into a file. This is useful in order to determine which areas needed more coverage or tests. 
-FactoryBot: 
+
+<img src="docs/simple-cov.png" width="500">
+
+
+
+**FactoryBot: **
+
 FactoryBot allows the developer to create test data in a controlled environment that can be reused throughout the testing period. 
 Shoulda-matchers:
 Shoulda-matchers helps to simplify testing for developers, creating “one-liners” which can replace the long and mistake prone phrases that were previously required for code to be tested. 
-Byebug: 
+
+**Byebug: **
+
 Assists developers to debug their bugs by stopping at a selected point in the code and check what is occurring as well as allowing the user to continue to the next line of code. 
 Database Cleaner:
 Database cleaner can be configured to clean up the test database code each time a test is run in order to maintain a clean start each time a test is run
 
 
-Linting
-Rubocop
+
+**Cyprus**:
+
+End to End automated testing. Initially our authentication tests passed, however our most recent tests after updating our forms fail to locate input fields. Regrettably this means these fields are not in line with our accessability goals and we will have to refactor this. We have included two testing videos that of our login, one from a week ago and a more recent recording of the run, this highlights how automated testing can reveal important accessability errors or non semantic html issues and is an extremely useful asset. Recordings of runs attached in docs.
+
+
+
+<img src="docs/cypruspass.png" width="500">
+
+<img src="docs/cyprusfail.png" width="500">
+
+**API testing:**
+
+
+
+<img src="docs/logincurl.png" width="500">
+
+**PostMan**:
+
+Postman was regularly used to hit our api and confirm the format of the requests we were sending, confirm authentication and was helpful for trouble-shooting RSpec tests, for instance if we needed to check if the test was asking the wrong questions or if the data was bad we could confirm this quickly in postman rather than manually reproducing the request in the browser. A lot of our data was nested and it helped to be able to take a look at what objects we were handling. The below request is from testing  when we modified our bookings index to make a more efficient query to the back end and produce a single object with all the data needed. 
+
+<img src="docs/postman.png" width="500">
+
+**Linting**
+**Rubocop**
 	Similar to prettier in terms of functionality except for the back end. It will ensure that our code base maintains uniformity across all components.
 
 Database: PostgreSQL: 
