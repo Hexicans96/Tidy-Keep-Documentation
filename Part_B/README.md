@@ -471,13 +471,18 @@ How to set up
 Rails - API
 
 1. Inside of your terminal, change into the root directory of the rails api.
+
+(You will need stripe credentials in order to utilize some features of the app. https://stripe.com/docs)
+
 2. Run this command
 
 ```
 $ EDITOR='code --wait' rails credentials:edit. (this will create a credentials file)
 ```
 
-3. Run the following commands
+3. Add your stripe keys and close and save the file.
+
+4. Run the following commands
 
 \$ bundle install
 
